@@ -43,11 +43,11 @@ fn main() {
     match_colours(third);
 }
 
-fn match_colours(rbg: (i32, i32, i32)) {
-    match rbg {
+fn match_colours(rgb: (i32, i32, i32)) {
+    match rgb {
         (r, _, _) if r < 10 => println!("Not much red"),
-        (_, b, _) if b < 10 => println!("Not much blue"),
-        (_, _, g) if g < 10 => println!("Not much green"),
+        (_, g, _) if g < 10 => println!("Not much green"),
+        (_, _, b) if b < 10 => println!("Not much blue"),
         _ => println!("Each colour has at least 10"),
     }
 }
